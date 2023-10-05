@@ -188,7 +188,7 @@ class GithubSearchViewController: UIViewController {
                 if users.count > 0 {
                     snapshot.appendItems(users, toSection: .list)
                 } else {
-                    snapshot.appendItems([SearchUser(id: -1, login: "", avatarUrl: "", htmlUrl: "")], toSection: .empty)
+                    snapshot.appendItems([SearchUser(login: "", avatarUrl: "", htmlUrl: "")], toSection: .empty)
                 }
                 
                 self.datasource.apply(snapshot)

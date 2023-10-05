@@ -118,10 +118,10 @@ class GithubSearchViewModel {
                 
                 self.totalCount = responseSearchUser.totalCount
                 
-                if self.currentPage == 1 {
-                    self.searchUsers = responseSearchUser.items
-                } else {
+                if responseSearchUser.items.count > 0 {
                     self.searchUsers.append(contentsOf: responseSearchUser.items)
+                } else {
+                    self.searchUsers = []
                 }
             }
             .store(in: &cancellables)

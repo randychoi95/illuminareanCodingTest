@@ -18,13 +18,12 @@ struct ResponseSearchUser: Codable {
 }
 
 struct SearchUser: Hashable, Identifiable, Codable {
-    var id: Int
+    var id = UUID()
     var login: String
     var avatarUrl: String
     var htmlUrl: String
     
     enum CodingKeys: String, CodingKey {
-        case id
         case login
         case avatarUrl = "avatar_url"
         case htmlUrl = "html_url"
