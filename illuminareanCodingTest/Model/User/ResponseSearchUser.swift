@@ -17,7 +17,7 @@ struct ResponseSearchUser: Codable {
     }
 }
 
-struct SearchUser: Hashable, Codable {
+struct SearchUser: Hashable, Identifiable, Codable {
     var id: Int
     var login: String
     var avatarUrl: String

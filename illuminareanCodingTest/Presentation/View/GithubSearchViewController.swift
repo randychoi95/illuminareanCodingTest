@@ -75,6 +75,7 @@ class GithubSearchViewController: UIViewController {
                 self.userSearchBar.textfield.becomeFirstResponder()
             }
         } else {
+            viewModel.currentPage = 1
             viewModel.getUser()
         }
     }
@@ -273,6 +274,7 @@ extension GithubSearchViewController: UITextFieldDelegate {
             }
         } else {
             view.endEditing(true)
+            viewModel.currentPage = 1
             viewModel.getUser()
         }
         
